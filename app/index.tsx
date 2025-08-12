@@ -10,6 +10,11 @@ const defultTodos: Todo[] = [
     title: "buy milk",
     isCompleted: false,
   },
+  {
+    id: 2,
+    title: "buy pig",
+    isCompleted: false,
+  },
 ]
 
 export default function Index() {
@@ -21,7 +26,6 @@ export default function Index() {
     >
       <StatusBar barStyle={"light-content"}/>  
       <Header/>
-      <Text>Pruvit</Text>
     </View>
   );
 }
