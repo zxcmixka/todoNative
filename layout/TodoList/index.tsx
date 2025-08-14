@@ -1,5 +1,6 @@
 import { Todo } from "@/types/todo";
-import { FlatList, View, Text } from "react-native";
+import { FlatList, Text, View } from "react-native";
+import TodoItem from "../TodoItem";
 
 type TodoListProps = {
     todos: Todo[];
@@ -10,10 +11,10 @@ const TodoList: React.FC<TodoListProps> = ({ todos }) => {
         <View>
             <FlatList data={todos}
             keyExtractor={(todo) => todo.id.toString()}
-            renderItem={({ item }) => <Text>{item.title}</Text>}
+            renderItem={({ item }) => <TodoItem title={item.title} isComplited={item.isCompleted} />}
             />
         </View>
     );
 }
 
-// export default TodoList
+export default TodoList

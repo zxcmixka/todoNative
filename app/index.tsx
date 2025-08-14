@@ -1,5 +1,6 @@
 import { COLORS } from "@/constants/ui";
 import Header from "@/layout/Header"
+import TodoList from "@/layout/TodoList";
 import { Todo } from "@/types/todo";
 import { useState } from "react";
 import {Text, View, StatusBar, StyleSheet } from "react-native"
@@ -26,6 +27,7 @@ export default function Index() {
     >
       <StatusBar barStyle={"light-content"}/>  
       <Header/>
+      <TodoList todos={todos}/>
     </View>
   );
 }
