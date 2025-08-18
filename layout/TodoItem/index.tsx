@@ -1,4 +1,6 @@
 import StyleText from "@/components/StyledText";
+import { COLORS } from "@/constants/ui";
+import { StyleSheet, View } from "react-native";
 
 type TodoItemProps = {
   title: string;
@@ -6,7 +8,18 @@ type TodoItemProps = {
 };
 
 const TodoItem: React.FC<TodoItemProps> = ({ title, isComplited }) => {
-  return <StyleText>{title}</StyleText>;
+  return <View><StyleText>{title}</StyleText></View>;
 };
+
+const styles = StyleSheet.create({
+  container: {
+    flexDirection: "row",
+    alignContent: "center",
+    justifyContent: "space-between",
+    padding: 15,
+    marginVertical: 8,
+    backgroundColor: COLORS.SECONDARY_BACKGROUND
+  },
+});
 
 export default TodoItem;
