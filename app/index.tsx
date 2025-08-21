@@ -14,7 +14,7 @@ const defultTodos: Todo[] = [
   {
     id: 2,
     title: "buy pig",
-    isCompleted: false,
+    isCompleted: true,
   },
 ];
 

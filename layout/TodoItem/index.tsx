@@ -8,7 +8,15 @@ type TodoItemProps = {
 };
 
 const TodoItem: React.FC<TodoItemProps> = ({ title, isComplited }) => {
-  return <View><StyleText>{title}</StyleText></View>;
+  return (
+    <View style={styles.container}>
+      <StyleText
+        style={[{ textDecorationLine: isComplited ? "line-through" : "none" }]}
+      >
+        {title}
+      </StyleText>
+    </View>
+  );
 };
 
 const styles = StyleSheet.create({
@@ -18,7 +26,7 @@ const styles = StyleSheet.create({
     justifyContent: "space-between",
     padding: 15,
     marginVertical: 8,
-    backgroundColor: COLORS.SECONDARY_BACKGROUND
+    backgroundColor: COLORS.SECONDARY_BACKGROUND,
   },
 });
 
