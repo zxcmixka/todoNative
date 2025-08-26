@@ -1,3 +1,4 @@
+import StyledButton from "@/components/StyledButton";
 import StyleText from "@/components/StyledText";
 import { COLORS } from "@/constants/ui";
 import { StyleSheet, View } from "react-native";
@@ -15,6 +16,7 @@ const TodoItem: React.FC<TodoItemProps> = ({ title, isComplited }) => {
       >
         {title}
       </StyleText>
+    <StyledButton label="Delete" />
     </View>
   );
 };
