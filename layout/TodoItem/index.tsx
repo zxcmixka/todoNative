@@ -17,6 +17,7 @@ const TodoItem: React.FC<TodoItemProps> = ({ title, isComplited }) => {
         {title}
       </StyleText>
     <StyledButton label="Delete" />
+    <StyledButton icon="pencil" />
     </View>
   );
 };
