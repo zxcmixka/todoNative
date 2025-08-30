@@ -16,8 +16,10 @@ const TodoItem: React.FC<TodoItemProps> = ({ title, isComplited }) => {
       >
         {title}
       </StyleText>
-    <StyledButton label="Delete" />
-    <StyledButton icon="pencil" />
+      <View style={styles.controlsContainer}>
+        <StyledButton icon="pencil" size="small" />
+        <StyledButton icon="trash" size="small" />
+      </View>
     </View>
   );
 };
@@ -30,6 +32,10 @@ const styles = StyleSheet.create({
     padding: 15,
     marginVertical: 8,
     backgroundColor: COLORS.SECONDARY_BACKGROUND,
+  },
+  controlsContainer: {
+    flexDirection: "row",
+    gap: 5,
   },
 });
 
