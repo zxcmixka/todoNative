@@ -10,13 +10,22 @@ import StyledText from "./StyledText";
 type StyleButtonProps = TouchableOpacityProps & {
   label?: string;
   icon: React.ComponentProps<typeof Ionicons>["name"];
+  size?: "default" | "large" | "small";
 };
 
-const StyledButton: React.FC<StyleButtonProps> = ({ label, icon, ...props }) => {
+const StyledButton: React.FC<StyleButtonProps> = ({
+  label,
+  icon,
+  size,
+  ...props
+}) => {
   return (
-    <TouchableOpacity style={styles.base} {...props}>
+    <TouchableOpacity
+      style={[styles.base, size === "small" && styles.small]}
+      {...props}
+    >
       {label && <StyledText>{label}</StyledText>}
-      {icon && <Ionicons name={icon} size={14} color={COLORS.PRIMARY_TEXT}/>}
+      {icon && <Ionicons name={icon} size={14} color={COLORS.PRIMARY_TEXT} />}
     </TouchableOpacity>
   );
 };
@@ -31,6 +40,10 @@ const styles = StyleSheet.create({
     paddingHorizontal: 20,
     borderRadius: 10,
     borderWidth: 1,
+  },
+  small: {
+    paddingHorizontal: 12,
+    paddingVertical: 12,
   },
 });
 
