@@ -7,12 +7,17 @@ type HeaderProps = {
   completedTodos: number;
 };
 
-const Header: React.FC<HeaderProps> = ({ totalTodos, completedTodos }) => {
+const Header: React.FC<HeaderProps> = ({ totalTodos, completedTodos, }) => {
+  //data 
+  const currentDate = new Date();
+  const options = { day: 'numeric', month: 'long' };
+  const formattedDate = currentDate.toLocaleDateString('en-US', options);
+
   return (
     <View style={styles.container}>
       <View style={styles.headerMainContainer}>
         <StyleText>ToDo App</StyleText>
-        <StyleText>11 August</StyleText>
+        <StyleText>{formattedDate}</StyleText>
       </View>
       <StyleText>
         Complited: {completedTodos} / {totalTodos}{" "}
