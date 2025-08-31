@@ -18,7 +18,7 @@ const TodoItem: React.FC<TodoItemProps> = ({ title, isComplited }) => {
       </StyleText>
       <View style={styles.controlsContainer}>
         <StyledButton icon="pencil" size="small" />
-        <StyledButton icon="trash" size="small" />
+        <StyledButton icon="trash" size="small" variant="delete"/>
       </View>
     </View>
   );

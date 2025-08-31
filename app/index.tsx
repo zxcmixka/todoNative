@@ -13,6 +13,11 @@ const defultTodos: Todo[] = [
   },
   {
     id: 2,
+    title: "buy pc",
+    isCompleted: false,
+  },
+  {
+    id: 3,
     title: "buy pig",
     isCompleted: true,
   },
