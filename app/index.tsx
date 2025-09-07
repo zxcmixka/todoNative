@@ -19,7 +19,7 @@ const defultTodos: Todo[] = [
   {
     id: 3,
     title: "buy pig",
-    isCompleted: true,
+    isCompleted: false,
   },
 ];
 
