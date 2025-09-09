@@ -13,16 +13,18 @@ const TodoItem: React.FC<TodoItemProps> = ({ title, isComplited }) => {
   return (
     <View style={styles.container}>
       <View style={styles.checkTitleContainer}>
-      <StyledCheckbox checked={isComplited} onCheck={() => {}}/>
-      <StyleText
-        style={[{ textDecorationLine: isComplited ? "line-through" : "none" }]}
-      >
-        {title}
-      </StyleText>
+        <StyledCheckbox checked={isComplited} onCheck={() => {}} />
+        <StyleText
+          style={[
+            { textDecorationLine: isComplited ? "line-through" : "none" },
+          ]}
+        >
+          {title}
+        </StyleText>
       </View>
       <View style={styles.controlsContainer}>
         <StyledButton icon="pencil" size="small" />
-        <StyledButton icon="trash" size="small" variant="delete"/>
+        <StyledButton icon="trash" size="small" variant="delete" />
       </View>
     </View>
   );
@@ -42,7 +44,9 @@ const styles = StyleSheet.create({
     gap: 5,
   },
   checkTitleContainer: {
-    
+    flexDirection: "row",
+    alignItems: "center",
+    gap: 10,
   },
 });
 
