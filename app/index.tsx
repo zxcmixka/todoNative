@@ -1,5 +1,6 @@
 import { COLORS } from "@/constants/ui";
 import Header from "@/layout/Header";
+import TodoCreator from "@/layout/TodoCreator";
 import TodoList from "@/layout/TodoList";
 import { Todo } from "@/types/todo";
 import { useState } from "react";
@@ -35,6 +36,7 @@ export default function Index() {
         totalTodos={todos.length}
         completedTodos={completedTodos.length}
       />
+      <TodoCreator onAddTodo={() => {}} />
       <TodoList todos={todos} />
     </View>
   );
