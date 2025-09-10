@@ -27,6 +27,10 @@ const defultTodos: Todo[] = [
 export default function Index() {
   const [todos, setTodos] = useState<Todo[]>(defultTodos);
 
+  const addTodo = (title: Todo["title"]) => {
+    setTodos([...todos, { id: todos.length +1, title, isCompleted: false}]);
+  }
+
   const completedTodos = todos.filter((todo) => todo.isCompleted);
 
   return (
@@ -36,7 +40,7 @@ export default function Index() {
         totalTodos={todos.length}
         completedTodos={completedTodos.length}
       />
-      <TodoCreator onAddTodo={() => {}} />
+      <TodoCreator onAddTodo={addTodo} />
       <TodoList todos={todos} />
     </View>
   );
