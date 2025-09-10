@@ -7,10 +7,10 @@ type TodoCreatorProps = {
   onAddTodo: (title: Todo["title"]) => void;
 };
 
-const TodoCreator: React.FC<TodoCreatorProps> = ({ ...props }) => {
+const TodoCreator: React.FC<TodoCreatorProps> = ({ onAddTodo, ...props }) => {
   return (
     <View style={styles.container}>
-      <StyledTextInput />
+      <StyledTextInput placeholder="Add a task..." />
       <StyledButton label="+" onPress={() => {}} />
     </View>
   );
